@@ -232,7 +232,7 @@ function Index() {
           <div className="grid items-center gap-10 md:grid-cols-[1.2fr_1fr]">
             <div className="text-center md:text-left">
               <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-secondary/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-secondary-foreground">
-                <Compass className="h-4 w-4" aria-hidden="true" /> stezka u Olomučan
+                <Compass className="h-4 w-4" aria-hidden="true" /> stezka pro malé i velké cestovatele
               </p>
               <h1 className="font-display text-6xl leading-[0.95] text-primary-foreground md:text-8xl">
                 Po stopách
@@ -240,12 +240,13 @@ function Index() {
                 Julese Verna
               </h1>
               <p className="font-display mt-4 text-3xl text-primary-foreground/90 md:text-4xl">
-                Dobrodružná stezka pro malé i velké cestovatele
+                Dobrodružná stezka, kterou si vytvoříš kdekoli
               </p>
               <p className="mx-auto mt-5 max-w-lg text-lg font-semibold text-primary-foreground/85 md:mx-0">
-                Vyražte s dětmi na 5,5 km venkovního dobrodružství z knihovny v Olomučanech na
-                Výletiště Bahňák. Plňte úkoly, hrajte si a sbírejte nálepky knih.
+                V lese, ve městě i na vlastní zahradě. Pro rodiny s dětmi, milovníky knih Julese
+                Verna i všechny dobrodruhy: 14 zastavení s úkoly, hrami a sbíráním nálepek knih.
               </p>
+
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
                 <a
                   href="#objednavka"
