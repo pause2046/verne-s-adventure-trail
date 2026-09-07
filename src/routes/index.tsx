@@ -447,19 +447,23 @@ function Index() {
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">O autorce</p>
             <h2 className="font-display text-5xl text-paper md:text-6xl">Zuzana Pospíšilová</h2>
             <p className="mt-4 text-lg text-secondary-foreground/85">
-              Stezku vymyslela a nakreslila maminka dvou dětí z Olomučan. Je tvořivá, ráda tráví
-              čas v přírodě a zapojuje se do komunitního dění v obci – stezku vytvořila pro
-              <strong> Klub maminek Olomučany</strong>, aby děti z obce a okolí mohly poznávat
-              přírodu hravou cestou.
+              Stezku vymyslela a nakreslila maminka dvou dětí. Je tvořivá, ráda tráví čas
+              v přírodě a miluje knihy Julese Verna – balíček vytvořila pro
+              <strong> Klub maminek Olomučany</strong>, aby si každá rodina mohla udělat
+              vlastní dobrodružnou výpravu tam, kde bydlí.
             </p>
-            <div className="photo-placeholder mt-6 min-h-40 w-full p-6 text-secondary-foreground">
-              <div>
-                <span className="font-display text-2xl">[fotka Zuzany]</span>
-                <p className="mt-1 text-xs font-semibold opacity-70">
-                  sem doplníte portrétní fotografii autorky
-                </p>
-              </div>
-            </div>
+            <figure className="mt-6">
+              <img
+                src={zuzanaAsset.url}
+                alt="Zuzana Pospíšilová, autorka stezky"
+                loading="lazy"
+                className="w-40 rounded-2xl border-2 border-primary/60 object-cover md:w-48"
+              />
+              <figcaption className="mt-2 text-sm text-secondary-foreground/70">
+                Zuzana Pospíšilová
+              </figcaption>
+            </figure>
+
           </div>
         </div>
       </section>
