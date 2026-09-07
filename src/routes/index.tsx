@@ -27,18 +27,19 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Po stopách Julese Verna – dobrodružná stezka pro rodiny" },
+      { title: "Po stopách Julese Verna – dobrodružná stezka na míru" },
       {
         name: "description",
         content:
-          "Objevte dobrodružnou stezku pro malé i velké cestovatele u Olomučan. 5,5 km, 14 zastavení s úkoly a hrami, sběratelské nálepky knih. PDF balíček ke stažení za 290 Kč.",
+          "Tisknutelný balíček pro dobrodružnou stezku, kterou si vytvoříte kdekoli – 14 zastavení s úkoly, hrami a sběratelskými nálepkami knih. PDF za 290 Kč.",
       },
-      { property: "og:title", content: "Po stopách Julese Verna – dobrodružná stezka pro rodiny" },
+      { property: "og:title", content: "Po stopách Julese Verna – dobrodružná stezka na míru" },
       {
         property: "og:description",
         content:
-          "Venkovní herní stezka z knihovny v Olomučanech na Výletiště Bahňák. Stáhni si PDF s mapou, 14 zastaveními a sběratelským leafletem.",
+          "Stezka, kterou si vytvoříš kdekoli – v lese, ve městě i na zahradě. 14 zastavení, úkoly, hry a sběratelský leaflet ke stažení a vytištění.",
       },
+
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
