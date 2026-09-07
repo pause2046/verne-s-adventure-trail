@@ -340,19 +340,20 @@ function Index() {
               {[
                 {
                   icon: Map,
-                  title: "Mapa trasy",
-                  text: "5,5 km od Knihovny Olomučany na Výletiště Bahňák – s vyznačenými zastaveními.",
+                  title: "Šablona na vlastní trasu",
+                  text: "Vyber si 14 zastavení kdekoli chceš – ve svém okolí, v lese, ve městě i na zahradě.",
                 },
                 {
                   icon: BookOpen,
                   title: "14 zastavení s úkoly a hrami",
-                  text: "Na každém stanovišti děti plní úkol nebo hru a vydělají si další knihu do sbírky.",
+                  text: "Na každém stanovišti se plní úkol nebo hra a získává se další kniha do sbírky.",
                 },
                 {
                   icon: ShoppingBag,
                   title: "Sběratelský leaflet „knihovna“",
-                  text: "Knihovnička, do které děti lepí tištěné nálepky knih od Julese Verna.",
+                  text: "Knihovnička, do které se lepí tištěné nálepky knih od Julese Verna.",
                 },
+
                 {
                   icon: Printer,
                   title: "Tiskové instrukce",
