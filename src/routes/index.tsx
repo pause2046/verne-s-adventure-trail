@@ -19,23 +19,27 @@ import {
 import balon from "@/assets/balon.png";
 import verne from "@/assets/verne.png";
 import ikony from "@/assets/ikony.png";
+import zuzanaAsset from "@/assets/zuzana.jpeg.asset.json";
+import leafletAsset from "@/assets/leaflet.jpeg.asset.json";
 import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Po stopách Julese Verna – dobrodružná stezka pro rodiny" },
+      { title: "Po stopách Julese Verna – dobrodružná stezka na míru" },
       {
         name: "description",
         content:
-          "Objevte dobrodružnou stezku pro malé i velké cestovatele u Olomučan. 5,5 km, 14 zastavení s úkoly a hrami, sběratelské nálepky knih. PDF balíček ke stažení za 290 Kč.",
+          "Tisknutelný balíček pro dobrodružnou stezku, kterou si vytvoříte kdekoli – 14 zastavení s úkoly, hrami a sběratelskými nálepkami knih. PDF za 290 Kč.",
       },
-      { property: "og:title", content: "Po stopách Julese Verna – dobrodružná stezka pro rodiny" },
+      { property: "og:title", content: "Po stopách Julese Verna – dobrodružná stezka na míru" },
       {
         property: "og:description",
         content:
-          "Venkovní herní stezka z knihovny v Olomučanech na Výletiště Bahňák. Stáhni si PDF s mapou, 14 zastaveními a sběratelským leafletem.",
+          "Stezka, kterou si vytvoříš kdekoli – v lese, ve městě i na zahradě. 14 zastavení, úkoly, hry a sběratelský leaflet ke stažení a vytištění.",
       },
+
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -228,7 +232,7 @@ function Index() {
           <div className="grid items-center gap-10 md:grid-cols-[1.2fr_1fr]">
             <div className="text-center md:text-left">
               <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-secondary/15 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.25em] text-secondary-foreground">
-                <Compass className="h-4 w-4" aria-hidden="true" /> stezka u Olomučan
+                <Compass className="h-4 w-4" aria-hidden="true" /> stezka pro malé i velké cestovatele
               </p>
               <h1 className="font-display text-6xl leading-[0.95] text-primary-foreground md:text-8xl">
                 Po stopách
@@ -236,12 +240,13 @@ function Index() {
                 Julese Verna
               </h1>
               <p className="font-display mt-4 text-3xl text-primary-foreground/90 md:text-4xl">
-                Dobrodružná stezka pro malé i velké cestovatele
+                Dobrodružná stezka, kterou si vytvoříš kdekoli
               </p>
               <p className="mx-auto mt-5 max-w-lg text-lg font-semibold text-primary-foreground/85 md:mx-0">
-                Vyražte s dětmi na 5,5 km venkovního dobrodružství z knihovny v Olomučanech na
-                Výletiště Bahňák. Plňte úkoly, hrajte si a sbírejte nálepky knih.
+                V lese, ve městě i na vlastní zahradě. Pro rodiny s dětmi, milovníky knih Julese
+                Verna i všechny dobrodruhy: 14 zastavení s úkoly, hrami a sbíráním nálepek knih.
               </p>
+
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
                 <a
                   href="#objednavka"
@@ -274,25 +279,26 @@ function Index() {
       {/* 2. PRO KOHO */}
       <section className="bg-paper pb-20 pt-6 md:pt-10">
         <div className="mx-auto max-w-5xl px-4 md:px-8">
-          <SectionTitle eyebrow="Pro koho" title="Pro rodiny, které rády objevují" />
+          <SectionTitle eyebrow="Pro koho" title="Pro všechny, kdo rádi objevují" />
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 icon: Baby,
                 title: "Pro rodiny s dětmi",
-                text: "Úkoly a hry vymyšlené tak, aby bavily školáky i předškoláky – a rodiče se u toho nenudili.",
+                text: "Pro ty, kdo chtějí vyrazit ven a zažít dobrodružství. Úkoly baví školáky, předškoláky i rodiče.",
+              },
+              {
+                icon: BookOpen,
+                title: "Pro milovníky Verna",
+                text: "Pro fanoušky knih Julese Verna a jeho příběhů – ponorka, balon, sopka i cesta kolem světa.",
               },
               {
                 icon: Trees,
-                title: "Výlet do přírody",
-                text: "5,5 km krásnou přírodou u Olomučan. Ideální na odpoledne i celou sobotu s piknikem na Bahňáku.",
-              },
-              {
-                icon: Footprints,
-                title: "Aktivita bez obrazovek",
-                text: "Žádný mobil ani tablet – jen mapa v ruce, propiska a společné pátrání po dalším zastavení.",
+                title: "Pro objevitele a výletníky",
+                text: "Pro každého, kdo má rád objevování a výlety do přírody. Bez mobilu – jen papír, tužka a chuť jít.",
               },
             ].map((c) => (
+
               <div key={c.title} className="paper-card p-7 text-center">
                 <c.icon className="mx-auto mb-4 h-10 w-10 text-primary" aria-hidden="true" />
                 <h3 className="font-display text-3xl">{c.title}</h3>
@@ -334,19 +340,20 @@ function Index() {
               {[
                 {
                   icon: Map,
-                  title: "Mapa trasy",
-                  text: "5,5 km od Knihovny Olomučany na Výletiště Bahňák – s vyznačenými zastaveními.",
+                  title: "Šablona na vlastní trasu",
+                  text: "Vyber si 14 zastavení kdekoli chceš – ve svém okolí, v lese, ve městě i na zahradě.",
                 },
                 {
                   icon: BookOpen,
                   title: "14 zastavení s úkoly a hrami",
-                  text: "Na každém stanovišti děti plní úkol nebo hru a vydělají si další knihu do sbírky.",
+                  text: "Na každém stanovišti se plní úkol nebo hra a získává se další kniha do sbírky.",
                 },
                 {
                   icon: ShoppingBag,
                   title: "Sběratelský leaflet „knihovna“",
-                  text: "Knihovnička, do které děti lepí tištěné nálepky knih od Julese Verna.",
+                  text: "Knihovnička, do které se lepí tištěné nálepky knih od Julese Verna.",
                 },
+
                 {
                   icon: Printer,
                   title: "Tiskové instrukce",
@@ -363,23 +370,19 @@ function Index() {
               ))}
             </div>
             <div className="space-y-5">
-              <div className="photo-placeholder min-h-48 w-full p-6 text-secondary-foreground">
-                <div>
-                  <span className="font-display text-2xl">[ukázka leafletu]</span>
-                  <p className="mt-1 text-xs font-semibold opacity-70">
-                    sem doplníte fotografii tištěného leafletu
-                  </p>
-                </div>
-              </div>
-              <div className="photo-placeholder min-h-48 w-full p-6 text-secondary-foreground">
-                <div>
-                  <span className="font-display text-2xl">[ukázka karty se zastaveními]</span>
-                  <p className="mt-1 text-xs font-semibold opacity-70">
-                    sem doplníte fotografii karty zastavení
-                  </p>
-                </div>
-              </div>
+              <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
+                <img
+                  src={leafletAsset.url}
+                  alt="Tištěný sběratelský leaflet Knihovna Julese Verna s knihovničkou a nálepkami knih"
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <figcaption className="px-4 py-3 text-sm text-secondary-foreground/80">
+                  Sběratelský leaflet – knihovnička, kam děti lepí nasbírané knihy.
+                </figcaption>
+              </figure>
             </div>
+
           </div>
         </div>
       </section>
@@ -397,8 +400,9 @@ function Index() {
             {[
               { n: "1", title: "Objednáš a zaplatíš", text: "Vyplníš krátký formulář a my ti pošleme platební údaje." },
               { n: "2", title: "Dostaneš PDF e-mailem", text: "Do 24 hodin od zaplacení ti přistane balíček ve schránce." },
-              { n: "3", title: "Vytiskneš mapu a leaflet", text: "Domácí tiskárna stačí – návod je součástí balíčku." },
-              { n: "4", title: "Vyrazíte na trasu", text: "Plníte úkoly, sbíráte knihy a užíváte si den venku." },
+              { n: "3", title: "Vytiskneš a rozmístíš", text: "Vytiskneš doma a vybereš si 14 vlastních zastavení – v lese, ve městě i na zahradě." },
+              { n: "4", title: "Vyrazíte na výpravu", text: "Plníte úkoly, hrajete hry, sbíráte knihy a užíváte si den venku." },
+
             ].map((s) => (
               <li key={s.n} className="paper-card relative p-6 pt-9 text-center">
                 <span className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border-2 border-secondary bg-primary font-display text-2xl font-bold text-primary-foreground">
@@ -447,19 +451,23 @@ function Index() {
             <p className="mb-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">O autorce</p>
             <h2 className="font-display text-5xl text-paper md:text-6xl">Zuzana Pospíšilová</h2>
             <p className="mt-4 text-lg text-secondary-foreground/85">
-              Stezku vymyslela a nakreslila maminka dvou dětí z Olomučan. Je tvořivá, ráda tráví
-              čas v přírodě a zapojuje se do komunitního dění v obci – stezku vytvořila pro
-              <strong> Klub maminek Olomučany</strong>, aby děti z obce a okolí mohly poznávat
-              přírodu hravou cestou.
+              Stezku vymyslela a nakreslila maminka dvou dětí. Je tvořivá, ráda tráví čas
+              v přírodě a miluje knihy Julese Verna – balíček vytvořila pro
+              <strong> Klub maminek Olomučany</strong>, aby si každá rodina mohla udělat
+              vlastní dobrodružnou výpravu tam, kde bydlí.
             </p>
-            <div className="photo-placeholder mt-6 min-h-40 w-full p-6 text-secondary-foreground">
-              <div>
-                <span className="font-display text-2xl">[fotka Zuzany]</span>
-                <p className="mt-1 text-xs font-semibold opacity-70">
-                  sem doplníte portrétní fotografii autorky
-                </p>
-              </div>
-            </div>
+            <figure className="mt-6">
+              <img
+                src={zuzanaAsset.url}
+                alt="Zuzana Pospíšilová, autorka stezky"
+                loading="lazy"
+                className="w-40 rounded-2xl border-2 border-primary/60 object-cover md:w-48"
+              />
+              <figcaption className="mt-2 text-sm text-secondary-foreground/70">
+                Zuzana Pospíšilová
+              </figcaption>
+            </figure>
+
           </div>
         </div>
       </section>
