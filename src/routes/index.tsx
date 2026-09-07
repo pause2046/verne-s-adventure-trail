@@ -369,23 +369,19 @@ function Index() {
               ))}
             </div>
             <div className="space-y-5">
-              <div className="photo-placeholder min-h-48 w-full p-6 text-secondary-foreground">
-                <div>
-                  <span className="font-display text-2xl">[ukázka leafletu]</span>
-                  <p className="mt-1 text-xs font-semibold opacity-70">
-                    sem doplníte fotografii tištěného leafletu
-                  </p>
-                </div>
-              </div>
-              <div className="photo-placeholder min-h-48 w-full p-6 text-secondary-foreground">
-                <div>
-                  <span className="font-display text-2xl">[ukázka karty se zastaveními]</span>
-                  <p className="mt-1 text-xs font-semibold opacity-70">
-                    sem doplníte fotografii karty zastavení
-                  </p>
-                </div>
-              </div>
+              <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
+                <img
+                  src={leafletAsset.url}
+                  alt="Tištěný sběratelský leaflet Knihovna Julese Verna s knihovničkou a nálepkami knih"
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <figcaption className="px-4 py-3 text-sm text-secondary-foreground/80">
+                  Sběratelský leaflet – knihovnička, kam děti lepí nasbírané knihy.
+                </figcaption>
+              </figure>
             </div>
+
           </div>
         </div>
       </section>
