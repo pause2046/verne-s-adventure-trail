@@ -371,7 +371,7 @@ function Index() {
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Ukázka</p>
               <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
                 <img
-                  src="/Knihovna.jpeg"
+                  src={`${import.meta.env.BASE_URL}Knihovna.jpeg`}
                   alt="Tištěný plakát Po stopách Julese Verna k vyvěšení"
                   loading="lazy"
                   className="w-full object-cover"
@@ -382,7 +382,7 @@ function Index() {
               </figure>
               <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
                 <img
-                  src="/leaflet.jpeg"
+                  src={`${import.meta.env.BASE_URL}leaflet.jpeg`}
                   alt="Tištěný sběratelský leaflet Knihovna Julese Verna s knihovničkou a nálepkami knih"
                   loading="lazy"
                   className="w-full object-cover"
@@ -468,7 +468,7 @@ function Index() {
             </p>
             <figure className="mt-6">
               <img
-                src={zuzanaAsset.url}
+                src={`${import.meta.env.BASE_URL}Zuzka.jpeg`}
                 alt="Zuzana Pospíšilová, autorka stezky"
                 loading="lazy"
                 className="w-40 rounded-2xl border-2 border-primary/60 object-cover md:w-48"
