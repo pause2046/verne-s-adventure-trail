@@ -400,8 +400,9 @@ function Index() {
             {[
               { n: "1", title: "Objednáš a zaplatíš", text: "Vyplníš krátký formulář a my ti pošleme platební údaje." },
               { n: "2", title: "Dostaneš PDF e-mailem", text: "Do 24 hodin od zaplacení ti přistane balíček ve schránce." },
-              { n: "3", title: "Vytiskneš mapu a leaflet", text: "Domácí tiskárna stačí – návod je součástí balíčku." },
-              { n: "4", title: "Vyrazíte na trasu", text: "Plníte úkoly, sbíráte knihy a užíváte si den venku." },
+              { n: "3", title: "Vytiskneš a rozmístíš", text: "Vytiskneš doma a vybereš si 14 vlastních zastavení – v lese, ve městě i na zahradě." },
+              { n: "4", title: "Vyrazíte na výpravu", text: "Plníte úkoly, hrajete hry, sbíráte knihy a užíváte si den venku." },
+
             ].map((s) => (
               <li key={s.n} className="paper-card relative p-6 pt-9 text-center">
                 <span className="absolute -top-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border-2 border-secondary bg-primary font-display text-2xl font-bold text-primary-foreground">
