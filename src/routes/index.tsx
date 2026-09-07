@@ -19,7 +19,10 @@ import {
 import balon from "@/assets/balon.png";
 import verne from "@/assets/verne.png";
 import ikony from "@/assets/ikony.png";
+import zuzanaAsset from "@/assets/zuzana.jpeg.asset.json";
+import leafletAsset from "@/assets/leaflet.jpeg.asset.json";
 import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
