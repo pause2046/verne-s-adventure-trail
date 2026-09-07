@@ -19,8 +19,6 @@ import {
 import balon from "@/assets/balon.png";
 import verne from "@/assets/verne.png";
 import ikony from "@/assets/ikony.png";
-import zuzanaAsset from "@/assets/zuzana.jpeg.asset.json";
-import leafletAsset from "@/assets/leaflet.jpeg.asset.json";
 import { supabase } from "@/integrations/supabase/client";
 
 
@@ -370,9 +368,21 @@ function Index() {
               ))}
             </div>
             <div className="space-y-5">
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Ukázka</p>
               <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
                 <img
-                  src={leafletAsset.url}
+                  src="/Knihovna.jpeg"
+                  alt="Tištěný plakát Po stopách Julese Verna k vyvěšení"
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <figcaption className="px-4 py-3 text-sm text-secondary-foreground/80">
+                  Tištěný plakát – takhle vypadá vytištěná stezka.
+                </figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-2xl border-2 border-primary/50 bg-paper/5">
+                <img
+                  src="/leaflet.jpeg"
                   alt="Tištěný sběratelský leaflet Knihovna Julese Verna s knihovničkou a nálepkami knih"
                   loading="lazy"
                   className="w-full object-cover"
@@ -496,10 +506,9 @@ function Index() {
         <p className="mt-2 text-sm">Vytvořeno pro Klub maminek Olomučany</p>
         <p className="mt-1 flex items-center justify-center gap-1.5 text-sm">
           <Mail className="h-4 w-4" aria-hidden="true" />
-          <a href="mailto:vas@email.cz" className="underline underline-offset-2 hover:text-primary">
-            vas@email.cz
+          <a href="mailto:zuzka@napis.cz" className="underline underline-offset-2 hover:text-primary">
+            zuzka@napis.cz
           </a>
-          <span className="opacity-60">(doplňte kontaktní e-mail)</span>
         </p>
       </footer>
     </main>
