@@ -279,25 +279,26 @@ function Index() {
       {/* 2. PRO KOHO */}
       <section className="bg-paper pb-20 pt-6 md:pt-10">
         <div className="mx-auto max-w-5xl px-4 md:px-8">
-          <SectionTitle eyebrow="Pro koho" title="Pro rodiny, které rády objevují" />
+          <SectionTitle eyebrow="Pro koho" title="Pro všechny, kdo rádi objevují" />
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 icon: Baby,
                 title: "Pro rodiny s dětmi",
-                text: "Úkoly a hry vymyšlené tak, aby bavily školáky i předškoláky – a rodiče se u toho nenudili.",
+                text: "Pro ty, kdo chtějí vyrazit ven a zažít dobrodružství. Úkoly baví školáky, předškoláky i rodiče.",
+              },
+              {
+                icon: BookOpen,
+                title: "Pro milovníky Verna",
+                text: "Pro fanoušky knih Julese Verna a jeho příběhů – ponorka, balon, sopka i cesta kolem světa.",
               },
               {
                 icon: Trees,
-                title: "Výlet do přírody",
-                text: "5,5 km krásnou přírodou u Olomučan. Ideální na odpoledne i celou sobotu s piknikem na Bahňáku.",
-              },
-              {
-                icon: Footprints,
-                title: "Aktivita bez obrazovek",
-                text: "Žádný mobil ani tablet – jen mapa v ruce, propiska a společné pátrání po dalším zastavení.",
+                title: "Pro objevitele a výletníky",
+                text: "Pro každého, kdo má rád objevování a výlety do přírody. Bez mobilu – jen papír, tužka a chuť jít.",
               },
             ].map((c) => (
+
               <div key={c.title} className="paper-card p-7 text-center">
                 <c.icon className="mx-auto mb-4 h-10 w-10 text-primary" aria-hidden="true" />
                 <h3 className="font-display text-3xl">{c.title}</h3>
